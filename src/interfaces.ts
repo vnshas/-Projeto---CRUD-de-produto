@@ -1,17 +1,17 @@
 export interface IProduct {
-  id: number;
-  name: string;
-  price: number;
-  createdAt: Date;
-  updatedAt: Date;
+  id: number
+  name: string
+  price: number
+  createdAt: Date
+  updatedAt: Date
 }
 export type IDelete = {
-  message:string;
+  message:string
 }
 
 export interface ICreateProduct{
-  name:string;
-  price:number;
+  name:string
+  price:number
 }
 
 export type TupdatedProduct = Pick<IProduct,'name' |'price' >
