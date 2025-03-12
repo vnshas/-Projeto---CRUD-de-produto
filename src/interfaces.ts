@@ -2,7 +2,7 @@ export interface IProduct {
   id: number
   name: string
   price: number
-  createdAt: Date
+  createdAt?: Date
   updatedAt: Date
 }
 export type IDelete = {

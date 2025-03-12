@@ -31,12 +31,11 @@ class ProductList implements IList{
 
     updateProduct(id: number, data: TupdatedProduct): TnewProduct{
         const product = this.productList.find((item) => item.id === id)
-        const createdAt = new Date()
         const updatedAt = new Date()
         const name = data.name
         const price = data.price
         const index = id-1
-        const newProduct = {name,price,id,createdAt,updatedAt}
+        const newProduct = {id,...product,...data,updatedAt}
         this.productList.splice(index,1,newProduct)
         return newProduct
         
